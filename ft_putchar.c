@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: noben-ai <noben-ai@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 13:02:14 by noben-ai          #+#    #+#             */
-/*   Updated: 2024/01/16 11:30:26 by noben-ai         ###   ########.fr       */
+/*   Created: 2024/01/16 11:35:58 by noben-ai          #+#    #+#             */
+/*   Updated: 2024/01/16 11:36:40 by noben-ai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "printf.h"
 
-# include <unistd.h>
-# include <stdarg.h>
-
-int ft_printf(const char *s, ...);
-int ft_putnbr(int n);
-int ft_putstr(char *str);
-int putchar(char c);
-
-#endif
+void ft_putchar(char c)
+{
+	write(1, &c, 1);
+}

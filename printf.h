@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   printf.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: noben-ai <noben-ai@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 11:34:11 by noben-ai          #+#    #+#             */
-/*   Updated: 2024/01/16 11:48:24 by noben-ai         ###   ########.fr       */
+/*   Created: 2024/01/11 13:02:14 by noben-ai          #+#    #+#             */
+/*   Updated: 2024/01/16 20:46:52 by noben-ai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int ft_putstr(char *str)
-{
-	int count;
-	
-	count = 0;
-	while(str)
-	{
-		ft_putchar(*str++);
-		count++;	
-	}
-	return (count);
-}
+# include <unistd.h>
+# include <stdarg.h>
+
+int ft_putnbr(int n, char *base);
+int ft_putstr(char *str);
+void ft_putchar(char c);
+int ft_printf(const char *s, ...);
+int ft_putnbr_u(unsigned int n, char *base);
+#endif
