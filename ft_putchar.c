@@ -6,13 +6,13 @@
 /*   By: noben-ai <noben-ai@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 11:35:58 by noben-ai          #+#    #+#             */
-/*   Updated: 2024/01/16 11:36:40 by noben-ai         ###   ########.fr       */
+/*   Updated: 2024/01/17 13:10:30 by noben-ai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void ft_putchar(char c)
+int ft_putchar(char c)
 {
-	write(1, &c, 1);
+	return write(1, &c, 1);
 }

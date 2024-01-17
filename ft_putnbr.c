@@ -6,38 +6,44 @@
 /*   By: noben-ai <noben-ai@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 11:22:17 by noben-ai          #+#    #+#             */
-/*   Updated: 2024/01/16 20:40:13 by noben-ai         ###   ########.fr       */
+/*   Updated: 2024/01/17 13:15:27 by noben-ai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
+#include <stdio.h>
 
-int ft_putnbr(int n, char *base)
+int ft_strlen(char *str)
 {
-	long int	number;
+    int len;
+
+    len = 0;
+    while(str[len])
+        len++;
+    return len;
+}
+
+int ft_putnbr(long number, char *base)
+{
 	int count;
 	int base_len;
 
-	base_len = 0;
+	base_len = ft_strlen(base);
 	count = 0;
-	number = n;
-	while(base[base_len])
-		base_len++;
 	if (number < 0)
 	{
 		ft_putchar('-');
 		number *= -1;
 		count++;
 	}
-	
-    if (number >= base_len)
+    if (number < base_len)
     {
         ft_putchar(base[number]);
         count++;
     }
 	else
     {
-        count += ft_putnbr((number / base_len), base);
+        ft_putnbr((number / base_len), base);
         ft_putchar(base[number % base_len]);
         count++;
     }

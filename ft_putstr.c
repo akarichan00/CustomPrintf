@@ -6,7 +6,7 @@
 /*   By: noben-ai <noben-ai@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 11:34:11 by noben-ai          #+#    #+#             */
-/*   Updated: 2024/01/16 11:48:24 by noben-ai         ###   ########.fr       */
+/*   Updated: 2024/01/17 12:02:05 by noben-ai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int ft_putstr(char *str)
 	int count;
 	
 	count = 0;
-	while(str)
+	while(str[count])
 	{
-		ft_putchar(*str++);
+		ft_putchar(str[count]);
 		count++;	
 	}
 	return (count);
