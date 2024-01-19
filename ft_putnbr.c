@@ -6,11 +6,11 @@
 /*   By: noben-ai <noben-ai@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 11:22:17 by noben-ai          #+#    #+#             */
-/*   Updated: 2024/01/17 13:15:27 by noben-ai         ###   ########.fr       */
+/*   Updated: 2024/01/19 11:13:45 by noben-ai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 #include <stdio.h>
 
 int ft_strlen(char *str)
@@ -37,15 +37,13 @@ int ft_putnbr(long number, char *base)
 		count++;
 	}
     if (number < base_len)
-    {
-        ft_putchar(base[number]);
-        count++;
-    }
+        count += ft_putchar(base[number]);
 	else
     {
-        ft_putnbr((number / base_len), base);
-        ft_putchar(base[number % base_len]);
-        count++;
+        // save the return value of each putnbr call to count
+        count += ft_putnbr((number / base_len), base);
+        // add 1 to the saved count whenever we print a digit
+        count += ft_putchar(base[number % base_len]);
     }
 	return (count);
 }
