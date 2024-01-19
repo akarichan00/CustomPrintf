@@ -6,7 +6,7 @@
 #    By: noben-ai <noben-ai@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/11 13:02:29 by noben-ai          #+#    #+#              #
-#    Updated: 2024/01/19 11:16:37 by noben-ai         ###   ########.fr        #
+#    Updated: 2024/01/19 13:10:25 by noben-ai         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ RM = rm -f
 
 NAME =  libftprintf.a
 
-SRCS	= ft_printf.c ft_putnbr.c ft_putstr.c 
+SRCS	= ft_strlen.c ft_printf.c put_int.c put_str.c put_p.c put_x.c
 
 OBJS	= $(SRCS:.c=.o)
 

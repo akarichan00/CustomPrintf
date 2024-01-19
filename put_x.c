@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   put_x.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: noben-ai <noben-ai@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 11:34:11 by noben-ai          #+#    #+#             */
-/*   Updated: 2024/01/19 11:16:18 by noben-ai         ###   ########.fr       */
+/*   Created: 2024/01/19 12:35:31 by noben-ai          #+#    #+#             */
+/*   Updated: 2024/01/19 13:10:05 by noben-ai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_putchar(char c)
+int	put_x(unsigned int number, char *base)
 {
-	write(1, &c, 1);
-	return 1;
-}
-int ft_putstr(char *str)
-{
-	int count;
-	
+	int				count;
+	unsigned int	base_len;
+
+	base_len = ft_strlen(base);
 	count = 0;
-	if(!str)
+	if (number == 0)
 	{
-		write(1, "(null)", 6);
-		return 6;	
+		count += ft_putchar('0');
+		return (count);
 	}
-	while(str[count])
-		ft_putchar(str[count++]);	
+	if (number < base_len)
+		count += ft_putchar(base[number]);
+	else
+	{
+		count += put_x((number / base_len), base);
+		count += ft_putchar(base[number % base_len]);
+	}
 	return (count);
 }

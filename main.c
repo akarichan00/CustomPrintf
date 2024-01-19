@@ -1,20 +1,11 @@
-#include "ft_printf.h"
 #include <stdio.h>
 
+#include "ft_printf.h"
 int main()
 {
-	
-	// printf("hi\n");
-	// int *num = NULL;
-	// int result = printf("%s", NULL);
-	int result1 = ft_printf("%i\n", 13124);
-	printf("mine: %d\n", result1);
-	// if (!result1)
-	// 	printf("waaa\n");
-	// else
-	// 	
-	
-	// printf("original: %d\n", result);	
-
-	// printf("result: %d\n", ft_putnbr(1337, "0123456789"));
+	// int result = printf("%b", 55);
+	// printf("%d\n", result);
+	close(1);
+	int	i = printf("test");
+	dprintf(2, "%d\n", i);
 }
