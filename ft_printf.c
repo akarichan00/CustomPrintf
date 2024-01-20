@@ -6,7 +6,7 @@
 /*   By: noben-ai <noben-ai@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:02:07 by noben-ai          #+#    #+#             */
-/*   Updated: 2024/01/19 15:37:35 by noben-ai         ###   ########.fr       */
+/*   Updated: 2024/01/20 18:15:18 by noben-ai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,22 +56,21 @@ int	ft_printf(const char *s, ...)
 
 	count = 0;
 	va_start(args, s);
-	// this condition is useless until u want to get ok okokokokok in paco strict
-	// cuz the original printf doesnt handle this 
-	// if(write(1, "", 0) == -1)
-	// 	return (-1);
 	while (*s)
 	{
-		if (*s == '%' && check_format(*(s + 1)) && *(s + 1) != '\0')
+		if (*s == '%' && *(s + 1) == '\0')
+			return (count);
+		if (*s == '%' && *(s + 1) != '\0')
 		{
-			count += handle_format(args, *(s + 1));
-			s += 2;
-		}
-		else
-		{
-			count += ft_putchar(*s);
+			s++;
+			if (check_format(*s))
+				count += handle_format(args, *s);
+			else 
+				count += ft_putchar(*s);
 			s++;
 		}
+		else
+			count += ft_putchar(*s++);
 	}
 	va_end(args);
 	return (count);

@@ -19,11 +19,6 @@ int	put_x(unsigned int number, char *base)
 
 	base_len = ft_strlen(base);
 	count = 0;
-	if (number == 0)
-	{
-		count += ft_putchar('0');
-		return (count);
-	}
 	if (number < base_len)
 		count += ft_putchar(base[number]);
 	else

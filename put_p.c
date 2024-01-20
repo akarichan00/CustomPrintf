@@ -6,7 +6,7 @@
 /*   By: noben-ai <noben-ai@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 11:34:53 by noben-ai          #+#    #+#             */
-/*   Updated: 2024/01/19 13:12:10 by noben-ai         ###   ########.fr       */
+/*   Updated: 2024/01/20 17:59:33 by noben-ai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@ int	put_p(unsigned long number, char *base)
 
 	base_len = ft_strlen(base);
 	count = 0;
-	if (number == 0)
-	{
-		count += ft_putchar('0');
-		return (count);
-	}
 	if (number < base_len)
 		count += ft_putchar(base[number]);
 	else
