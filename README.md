@@ -9,19 +9,25 @@ this project is a recoding of the famous `printf`in C, where its important to ud
   - understanding of low-level function implementation
 
 ## Getting started
-  1. Clone this repository:
+  1. Clone this repository
        ```bash
        git clone https://github.com/akarichan00/1337-printf.git
        ```
-  2. Navigate the project's repository and make:
+  2. Enter the repository and Compile the files using make:
       ```bash
       cd 1337-printf
       make
       ```
-
-## Where users can get help with your project
-## Who maintains and contributes to the project
+  3. Use it in your code
+     To use the library functions in your code, clone it in your project's root folder and simply include its header:
+     ```bash
+     #include "ft_printf.h"
+     ```
 
 ## Resources
   - [C Variadic Functions (GNU)](https://www.gnu.org/software/libc/manual/html_node/Variadic-Functions.html)
   - [Understanding printf](https://en.wikipedia.org/wiki/Printf_format_string)
+
+
+# Tester
+  To test your printf you can use this tester : https://github.com/Tripouille/printfTester
