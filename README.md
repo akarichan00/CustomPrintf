@@ -25,8 +25,12 @@ this project is a recoding of the famous `printf`in C, where its important to ud
      ```
 
 ## Resources
+  - [Best explanation of variadic functions](https://www.youtube.com/watch?v=oDC208zvsdg)
   - [C Variadic Functions (GNU)](https://www.gnu.org/software/libc/manual/html_node/Variadic-Functions.html)
-  - [Understanding printf](https://en.wikipedia.org/wiki/Printf_format_string)
+  - [C Variadic Functions (cppreference)](https://en.cppreference.com/w/c/variadic)
+  - [Understanding printf](https://en.wikipedia.org/wiki/Printf_format_string) 
+  - [implementing Variadic functions](https://www.youtube.com/watch?v=7Sph8JlRo0g&embeds_referring_euri=https%3A%2F%2Fwww.notion.so%2F&source_ve_path=MjM4NTE)
+  - [Deep understanding of variadic functions ](https://miro.com/app/board/uXjVN-42a5k=/)
 
 
 # Tester
